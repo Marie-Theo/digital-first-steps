@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping\Id;
 
 #[Entity]
 #[Table(name: 'tbl_quiz')]
-class Quiz {
+class Question {
 
     private static $Key = 1;
     #[Id]
@@ -140,10 +140,10 @@ class Quiz {
     }
 
     public function getArrayRightAnswer() {
-        $RightAnswer = [];
+        $RightAnswer =[];
         $option=$this->getOptions();
         foreach($this->rigthAnswer as $Answer){
-            $RightAnswer.=$option[$Answer];
+            $RightAnswer->array_push($option[$Answer]);
         }
         return $RightAnswer;
     }
