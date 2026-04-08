@@ -28,7 +28,7 @@ $id = $_POST['id'] ?? 0;
 
 if (isset($_POST['response']) && $id!=0 ){
     foreach($_POST['response'] as $reponse){
-        echo $reponse,$quiz[$id]->isRight($value),'<br>';
+        echo $reponse,$Quiz[$id]->getArrayRightAnswer();//$Quiz[$id]->isRight($reponse),'<br>';
         // $Quiz[$id];
     }
     $alert = $_POST['response'];

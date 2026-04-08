@@ -143,7 +143,8 @@ class Quiz {
         $RightAnswer = [];
         $option=$this->getOptions();
         foreach($this->rigthAnswer as $Answer){
-            $RightAnswer.push($option[$Answer]);
+            $RightAnswer.=$option[$Answer];
         }
+        return $RightAnswer;
     }
 }
