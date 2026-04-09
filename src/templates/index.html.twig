@@ -9,14 +9,15 @@
     <body>
         <div class='container'>
             <h1>{{software_name}}</h1>
-            <div class="alert alert-warning" role="alert">
-                {% if alert == [] %}
+            <div class="alert {{alert[0]}}" role="alert">
+                {{alert[1]}}
+                {# {% if alert == [] %}
                     Bienvenue sur notre site de quiz !
                 {% else %}
                     {% for poster in alert %}
                         {{poster}}
                     {% endfor %}
-                {% endif %}
+                {% endif %} #}
             </div>
             
             <form action="" method="POST" class="card">

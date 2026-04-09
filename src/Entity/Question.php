@@ -29,8 +29,9 @@ class Question {
     public function __construct($question, $options, $rigth, $correcitionOption) {
         $this->id = self::$Key;
         $this->question = $question;
-        $this->rigthAnswer = $rigth;
         $this->options = $options;
+        sort($rigth);
+        $this->rigthAnswer = $rigth;
         $this->correcitionOption = $correcitionOption;
         self::$Key++;
     }
@@ -143,7 +144,7 @@ class Question {
         $RightAnswer =[];
         $option=$this->getOptions();
         foreach($this->rigthAnswer as $Answer){
-            $RightAnswer->array_push($option[$Answer]);
+            array_push($RightAnswer, $option[$Answer]);
         }
         return $RightAnswer;
     }

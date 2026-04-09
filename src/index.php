@@ -27,36 +27,33 @@ $id = $_POST['id'] ?? 0;
 
 
 if (isset($_POST['response']) && $id!=0 ){
-    foreach($_POST['response'] as $reponse){
-        echo $_POST['response'];
-        echo '<br>';
-        var_dump($_POST['response']);
-        echo '<br>';
-        echo $Question[$id]->getArrayRightAnswer();
-        echo '<br>';
-        var_dump($Question[$id]->getArrayRightAnswer());
-        echo '<br>';
-        echo '<br>';
-        if ($Question[$id]->getArrayRightAnswer() == $_POST['response']){
-            $alert = $_POST['response'];
-        }
-        // $Question[$id];
+    if ($_POST['response'] == $Question[$id]->getArrayRightAnswer()){
+        $alert = ['alert-success','La réponse est correct.'];
+    } else {
+        $alert = ['alert-danger','La réponse est fausse!'];
+        $id=$id-1;
     }
-    // $alert = $_POST['response'];
 } else {
-    $alert = [];
+    $alert = ['alert-info','Bienvenu sur le Quiz'];
 }
 
+if ($id+1 <= count($Question)){
+    $id=$id+1;
+}
 
-$id=$id+1;
 if (isset($Question[$id])){
+
+    if (count($Question[$id]->getRigthAnswer()) == 1){
+        $typeQuestion = 'radio';
+    } else {
+        $typeQuestion = 'checkbox';
+    }
     
     echo $twig->render('index.html.twig',
-        ['software_name' => 'Premier Pas Numérique',
+        ['software_name' => 'Digitak First Steps',
         'Question'=>$Question[$id],
         'alert'=>$alert,
-        'typeQuestion'=>'checkbox'
-        // 'typeQuestion'=>'radio'
+        'typeQuestion'=>$typeQuestion
         ]
     );
 } else {
