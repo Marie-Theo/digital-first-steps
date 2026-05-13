@@ -80,8 +80,8 @@ Une application Web d'initiation et de découverte du Système d'Information du 
 
 | Étudiant | Dépôt GitHub |
 |----------|--------------|
-| Elliot | `À compléter` |
-| Maxence | `À compléter` |
+| Elliot | [https://github.com/ElliotJoker](https://github.com/ElliotJoker) |
+| Maxence | [https://github.com/CharlesMaxence](https://github.com/CharlesMaxence) |
 | Théo | [https://github.com/Marie-Theo](https://github.com/Marie-Theo) |
 
 ## Installation et démarrage
