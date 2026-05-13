@@ -82,7 +82,7 @@ Une application Web d'initiation et de découverte du Système d'Information du 
 |----------|--------------|
 | Elliot | `À compléter` |
 | Maxence | `À compléter` |
-| Théo | `À compléter` |
+| Théo | [https://github.com/Marie-Theo](https://github.com/Marie-Theo) |
 
 ## Installation et démarrage
 
