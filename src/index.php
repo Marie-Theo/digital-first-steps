@@ -50,7 +50,7 @@ if (isset($Question[$id])){
     }
     
     echo $twig->render('index.html.twig',
-        ['software_name' => 'Digitak First Steps',
+        ['software_name' => 'Digital First Steps',
         'Question'=>$Question[$id],
         'alert'=>$alert,
         'typeQuestion'=>$typeQuestion
