@@ -13,17 +13,22 @@
 
 <div class="example-wrapper">
     <div>
-        <section id='Espace-professeur'>
+        <section id='Espace-professeur' class='text-end'>
             <form method='POST' action=''>
-                <input type='submit' value='Espace professeur'>
+                <button type="submit" class="btn btn-primary">Espace professeur</button>
             </form>
         </section>
         <section id='Espace-eleve'>
-            <div>
+            <div id='présentation' class="card">
+                <h2 class="card-header">Présentation</h2>
+                <div class="card-body">
+                    <h5 class="card-title"> titre de la présentation</h5>
+                    <p class="card-text">text de présentation</p>
+                </div>
             </div>
-            <form method='POST'>
+            <form id='identification-eleve' method='POST' class='text-center'>
                 <input type='text' name='code-identification' placeholder='code'/>
-                <input type='submit' action='' value='rejoindre'>
+                <button type="submit" class="btn btn-primary">Rejoindre</button>
             </form>
         </section>
     </div>
